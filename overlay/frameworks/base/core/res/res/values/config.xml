@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds. -->
+<resources>
+
+    <!-- List of regexpressions describing the interface (if any) that represent tetherable
+         USB interfaces.  If the device doesn't want to support tething over USB this should
+         be empty.  An example would be "usb.*" -->
+    <string-array translatable="false" name="config_tether_usb_regexs">
+        <item>"rndis\\d"</item>
+	<item>"usb\\d"</item>
+    </string-array>
+
+    <string-array translatable="false" name="config_tether_upstream_regexs">
+    	<item>"pdp\\d"</item> 
+    	<item>"rmnet\\d"</item>
+    	<item>"wlan\\d"</item>
+    </string-array>
+
+    <!-- List of regexpressions describing the interface (if any) that represent tetherable
+         Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
+         should be empty.  An example would be "softap.*" -->
+    <string-array translatable="false" name="config_tether_wifi_regexs">
+	<item>"athap0"</item>
+    </string-array>
+
+    <!-- The default iface on which to monitor data use -->
+    <string name="config_datause_iface">pdp0</string>
+
+    <bool name="config_automatic_brightness_available">false</bool>
+
+    <bool name="config_unplugTurnsOnScreen">true</bool>
+
+    <bool name="config_animateScreenLights">false</bool>
+
+    <!-- Indicate whether the SD card is accessible without removing the battery. -->
+    <bool name="config_batterySdCardAccessibility">true</bool>
+
+    <!-- Display low battery warning when battery level dips to this value -1 -->
+    <integer name="config_lowBatteryWarningLevel">15</integer>
+
+    <!-- Specifies the amount of time to disable virtual keys after the screen is touched
+         in order to filter out accidental virtual key presses due to swiping gestures
+         or taps near the edge of the display.  May be 0 to disable the feature.
+         It is recommended that this value be no more than 250 ms.
+         This feature should be disabled for most devices. -->
+    <integer name="config_virtualKeyQuietTimeMillis">200</integer>
+
+    <!-- Vibrator pattern for feedback about a long screen/key press -->
+    <integer-array name="config_longPressVibePattern">
+        <item>50</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about touching a virtual key -->
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>45</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
+    <integer-array name="config_keyboardTapVibePattern">
+        <item>50</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
+    <integer-array name="config_safeModeDisabledVibePattern">
+        <item>60</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
+    <integer-array name="config_safeModeEnabledVibePattern">
+        <item>100</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about hitting a scroll barrier -->
+    <integer-array name="config_scrollBarrierVibePattern">
+        <item>40</item>
+    </integer-array>
+</resources>
